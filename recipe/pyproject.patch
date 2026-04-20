@@ -1,12 +1,8 @@
 diff --git a/pyproject.toml b/pyproject.toml
-index bdc6ae4..55c80e0 100644
+index 84cb150..c49b322 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -32,11 +32,10 @@ classifiers = [
- requires-python = ">=3.11"
- 
- dependencies = [
--  "pre-commit",
+@@ -35,7 +35,7 @@ dependencies = [
    "toml",
    "torch>=2.7.0",
    "tqdm",
