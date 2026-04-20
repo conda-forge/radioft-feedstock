@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: radioft
-  version: 0.1.1
-  python_min: 3.11
+  version: "0.2.0"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/radioft-${{ version }}.tar.gz
-  sha256: 6e691fbe81d333f20583538e891549a6dd088406e299f8ad0aecb56d9a8e3ab2
+  sha256: 1649fa5da63d1b7270d0022a4f8ea5a2b03d97ac9a5268e1c15bb82aaccd9456
   patches:
     - pyproject.patch  # handle cupy dependency
 
@@ -39,6 +39,7 @@ requirements:
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - radioft
       pip_check: true
